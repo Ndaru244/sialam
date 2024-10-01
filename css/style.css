@@ -1,4 +1,5 @@
 @import "bulma.css";
+
 /* Default (Light Mode) */
 :root {
     --background-color: #ffffff;
@@ -12,40 +13,53 @@
     --background-color: #121212;
     --text-color: #f5f5f5;
     --primary-color: #ff79c6;
+    --brand-colors: #F8941D;
 }
-.has-text-brand{
-    color: var(--brand-colors);
+
+html {
+    scroll-behavior: smooth;
 }
-.btn-cstm,.is-brand {
+
+.has-text-brand {
+    color: var(--brand-colors) !important;
+}
+
+.btn-cstm,
+.is-brand {
     background-color: var(--brand-colors);
     color: #000;
 }
-.btn-cstm,.is-brand:hover {
-    background-color: var(--brand-colors); 
+
+.btn-cstm,
+.is-brand:hover {
+    background-color: var(--brand-colors);
     color: #333;
 }
 
-.btn-footer{
+.btn-footer {
     background-color: #333;
     color: white;
 }
+
 .no-border {
     border: 0;
 }
+
 header {
-      padding-top: 70px;
-    }
+    padding-top: 70px;
+}
 
 .hero.is-primary {
     position: relative;
     background-image: url('../assets/contents/background.jpg');
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
     /* height: 100vh; */
     display: flex;
     /* justify-content: center;
     align-items: center; */
 }
+
 .hero.is-primary::before {
     content: "";
     position: absolute;
@@ -82,9 +96,10 @@ header {
 .columns {
     align-items: center;
 }
+
 .column.is-half {
     flex-basis: 50%;
-  }
+}
 
 .navbar-burger,
 .navbar-item {
@@ -120,11 +135,13 @@ body {
     max-width: 100%;
     height: auto;
 }
+
 #about .column.is-one-third {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
+
 #about .title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -143,11 +160,13 @@ body {
 }
 
 #download-app {
-    background-color: #F8941D; /* Warna oranye */
+    background-color: #F8941D;
+    /* Warna oranye */
     padding: 5rem 2.5rem;
 }
 
-#download-app .title, #download-app .subtitle {
+#download-app .title,
+#download-app .subtitle {
     color: var(--text-color);
 }
 
@@ -162,11 +181,13 @@ body {
 .footer .has-text-light {
     color: #ffffff;
 }
-.footer, .bg-dark {
+
+.footer,
+.bg-dark {
     background: #333;
 }
 
-.brand-footer{
+.brand-footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,4 +201,10 @@ body {
 
 .social-icons a {
     font-size: 1.5rem;
+}
+
+.navbar-item.is-active {
+    background-color: var(--brand-colors);
+    color: #333;
+    font-weight: bolder;
 }
